@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.body{
+    padding:0;
+    position: relative;
+}
+.main{
+    position: absolute;
+    background-color:yellow;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+
+}
+.white1{
+    
+    position: relative;
+    top:110px;
+    left: 40px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color:white;
+    overflow: hidden;
+    
+    
+}
+.white1::before{
+    content: "";
+    color: red;
+    position: relative;
+    top: 30px;
+    left: 60px;
+}
+.white2{
+    
+    position: relative;
+    
+    left: 310px;
+    top: -35px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color:white;
+    overflow: hidden;
+}
+.black1{
+    position: relative;
+    left: 55px;
+    
+    top: 75px;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-radius: 50%;
+    animation-name: move;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+
+}
+.black2{
+    position: relative;
+    left: 55px;
+    
+    top: 75px;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-radius: 50%;
+    animation-name: move;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+
+}
+.mouth{
+    position: absolute;
+    left: 40%;
+    background-color: brown;
+    height: 160px;
+    width: 90px;
+    clip-path: ellipse(25% 40% at 50% 50%);
+    transform: rotateZ(90deg);
+}
+@keyframes move{
+    0%{
+        transform: translatey(-150px);
+        
+        
+    }
+    100%{
+        transform: translatey(80px);
+    }
+}
